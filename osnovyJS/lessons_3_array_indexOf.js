@@ -17,6 +17,12 @@ if (arr.indexOf(7)!==-1) {
 }
 else console.log('element is not in idx')
 
+if (~arr.indexOf(17)) {
+    console.log('element in array')
+}
+else console.log('element is not in idx')
+
+
 const newArray = ['Hi', 'hello']
 // console.table(newArray)
 console.log(newArray.indexOf('hello'))
