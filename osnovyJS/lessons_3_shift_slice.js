@@ -1,12 +1,12 @@
 //shift - мутирует
-let arr = [3,4,5]
+let arr = [1,3,4,5]
 let newArray = arr.shift()
 console.log(newArray)
 
 
 //unshift - мутирует
 let bArray = [3,4,5]
-let someArray = bArray.unshift(10);
+let someArray = bArray.unshift(3);
 console.log(bArray)
 
 
