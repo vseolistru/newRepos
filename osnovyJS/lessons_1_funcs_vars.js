@@ -12,9 +12,11 @@ if (10 > 100) {
 }
 
 console.log(name)
+//хостинг нераспространяется на const
 const newName = "Some New Name"
 console.log(newName)
 let letName = "Some mutable Name"
+//хостинг не распространяетя на let
 console.log(letName)
 letName = "Mutable Name"
 console.log(letName)

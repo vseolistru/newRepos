@@ -3,6 +3,7 @@ function someFunc (args) {
     //do something
     return {some:'object'}
 }
+
 //function expression
 var someFunc1;
 var result = someFunc1(1)
@@ -23,11 +24,20 @@ fn(function () {
 })
 
 //arrow function
-
 var fn2 = () => {
     return {mess:'Hello arrow'}
 }
 //var fn2 = () =>'Hello arrow'
 var res = fn2()
-
 console.log(res)
+
+const array = [1,2,3,4]
+let resultArray;
+const handlerDouble = (array) => {
+    resultArray = []
+    array.forEach(item => resultArray.push(item*item))
+    return resultArray
+}
+handlerDouble(array)
+
+console.log(resultArray)
