@@ -34,6 +34,9 @@ console.log(sum(2,5))
 //Каждая функция помнит где была обьявлена и может
 // пользоваться переменными области видимости которая была доступна на тот момент
 
+//(Функции, которые возвращаются из других функции)
+//(Возвращаемая функция запоиинает область видимости в скрытый ключ [[Scope]])
+
 const someVar = 10;
 const newVar = 20;
 
@@ -59,3 +62,33 @@ console.log('result for sum+3: '+result)
 function sum3 (a,b) {
     return a+b
 }
+
+console.log('_________Example Scope')
+
+function hello (args) {
+    const helloName = () => {
+        console.log('Hello', args)
+    }
+    return helloName
+}
+const retFunc = hello(newName)
+retFunc()
+
+console.log("_______Example independent count")
+
+function outer() {
+    let counter = 0;
+    function incrementCounter () {
+        console.log( ++counter)
+    }
+    return incrementCounter
+}
+
+const myCounter1 = outer();
+myCounter1()
+myCounter1()
+console.log('next counter')
+const myCounter2 = outer();
+myCounter2()
+myCounter2()
+myCounter2()
